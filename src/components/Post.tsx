@@ -1,3 +1,4 @@
+import DeletePostButton from "./DeletePostButton";
 import type { TPost } from '@/lib/types';
 
 export default function Post({ id, title, content, authorName }: Omit<TPost, 'published' | 'author'> & { authorName: string | null | undefined }) {
@@ -6,6 +7,7 @@ export default function Post({ id, title, content, authorName }: Omit<TPost, 'pu
             <h3 className="text-lg font-semibold mb-2">{authorName}</h3>
             <h4 className="text-md font-medium mb-1">{title}</h4>
             <p className="text-sm">{content}</p>
+            <DeletePostButton postId={id} />
         </div>
     );
 }
