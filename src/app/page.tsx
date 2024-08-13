@@ -23,6 +23,7 @@ export default async function Home() {
 
   return (
     <main className={styles.main}>
+      <Link href={'/add-post'}>Add Post</Link>
       <h1>Feed</h1>
 
       {posts.length === 0 ? (
